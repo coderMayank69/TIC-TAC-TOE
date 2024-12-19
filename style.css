@@ -62,8 +62,17 @@ h1 {
 }
 
 #msg {
-    height: 30vmin;
+    height: 5vmin;
     color: rgb(209, 243, 19);
+}
+
+.msg-container {
+    height: 80vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 .hide {
