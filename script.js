@@ -24,7 +24,7 @@ const resetGame = () => {
 };
 
 boxes.forEach((box) => {
-    box.addEventListner("click", () => {      
+    box.addEventListener("click", () => {      
         if (turn0) {
             box.innerText = "0";
             box.style.color =  "red";
