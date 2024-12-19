@@ -14,7 +14,7 @@ const winPatterns = [
     [2, 5, 8],
     [2, 4, 6],
     [3, 4, 5],
-    [6, 7, 8]
+    [6, 7, 8],
 ];
 
 const resetGame = () => {
@@ -24,14 +24,14 @@ const resetGame = () => {
 };
 
 boxes.forEach((box) => {
-    box.addEventListener("click", () => {      
+    box.addEventListener("click", () => {
         if (turn0) {
             box.innerText = "0";
-            box.style.color =  "red";
+            box.style.color = "red";
             turn0 = false;
         } else {
             box.innerText = "X";
-            box.style.color =  "blue";
+            box.style.color = "blue";
             turn0 = true;
         }
         box.disabled = true;
@@ -40,13 +40,13 @@ boxes.forEach((box) => {
 });
 
 const disableBoxes = () => {
-        for (let box of boxes){
-            box.disabled = true;
-        }
+    for (let box of boxes) {
+        box.disabled = true;
+    }
 };
 
 const enableBoxes = () => {
-    for (let box of boxes){
+    for (let box of boxes) {
         box.disabled = false;
         box.innerText = "";
     }
@@ -57,7 +57,7 @@ const showWinner = (winner) => {
     msg.innerText = `Congartulation, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     disableBoxes();
-}
+};
 const checkWinner = () => {
     for (pattern of winPatterns) {
         let pos1Val = boxes[pattern[0]].innerText;
@@ -65,8 +65,9 @@ const checkWinner = () => {
         let pos3Val = boxes[pattern[2]].innerText;
 
         if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
-            if (pos1Val === pos2Val === pos3Val);
-            showWinner(pos1Val);
+            if (pos1Val === pos2Val === pos3Val) {
+                showWinner(pos1Val);
+            }
         }
     }
 };
