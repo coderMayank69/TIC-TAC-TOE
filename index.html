@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAME</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -12,9 +12,10 @@
 <body>
 
     <div class="msg-container hide">
-        <p id="msg"> Winner </p>
+        <p id="msg"> Winner! </p>
+        <button id="new-btn">New Game</button>
     </div>
-    <button id="new-btn">new game </button>
+    
     <main>
         <h1>TIC TAC TOE</h1>
         <div class="container">
@@ -28,12 +29,14 @@
                 <button class="box"></button>
                 <button class="box"></button>
                 <button class="box"></button>
-
             </div>
         </div>
-        <button id="reset-btn">Restart</button>
-
-
+        <div class="button-container">
+            <button id="reset-btn">Restart Game</button>
+        </div>
     </main>
+    
     <script src="script.js" defer></script>
 </body>
+
+</html>
